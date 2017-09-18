@@ -1,0 +1,14 @@
+#values h1 {
+	font-size: 3em;
+	font-weight: bold;
+}
+
+#values p {
+
+}
+
+#values .img-bg {
+	background: url('../img/values/value.png') no-repeat;
+	color: #fff;
+	text-align: center;
+}

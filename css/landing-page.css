@@ -1,0 +1,73 @@
+#home {
+	color: #fff;
+}
+
+.landing-img {
+	position: fixed;
+}
+
+.landing-p {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	font-size: 2.1em;
+	left: 50%;
+	margin-left: -50%;
+	line-height: 1em;
+}
+
+#home h1 {
+	font-family: 'missguided_bold', Arial;
+	font-weight: bold;
+}
+
+#home a {
+	color: #fff;
+	font-size: 2em;
+	font-weight: 100;
+	text-decoration: underline;
+}
+
+#home a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+#home .form-control {
+	border: 1px solid #fff;
+	border-radius: 6px;
+}
+
+.transp-bkg {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";       /* IE 8 */
+	filter: alpha(opacity=50);  /* IE 5-7 */
+	-moz-opacity: 0.5;          /* Netscape */
+	-khtml-opacity: 0.5;        /* Safari 1.x */
+	opacity: 0.5;               /* Good browsers */
+}
+
+@media (min-width: 768px) {
+	.landing-img {
+		background: url("../img/landing-page-desktop.png") no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		background-attachment: scroll;
+	}
+
+	#home h1 {
+		font-size: 5em;
+	}
+}
+
+@media (max-width: 767px) {
+	.landing-img {
+		background: url("../img/landing-page-mobile.png") no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		background-attachment: scroll;
+	}
+}
