@@ -1,7 +1,7 @@
-@import url('landing-page.css');
+/*@import url('landing-page.css');
 @import url('wanna-work.css');
 @import url('our-culture.css');
-@import url('our-values.css');
+@import url('our-values.css');*/
 
 /* fonts inclusion */
 @font-face {
@@ -40,3 +40,178 @@ body {
 	font-family: 'missguided_lightlight', Arial;
 }
 
+/* langind page */
+#home {
+    color: #fff;
+}
+
+.landing-img {
+    position: fixed;
+}
+
+.landing-p {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 2.1em;
+    left: 50%;
+    margin-left: -50%;
+    line-height: 1em;
+}
+
+#home h1 {
+    font-family: 'missguided_bold', Arial;
+    font-weight: bold;
+}
+
+#home a {
+    color: #fff;
+    font-size: 2em;
+    font-weight: 100;
+    text-decoration: underline;
+}
+
+#home a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+#home .form-control {
+    border: 1px solid #fff;
+    border-radius: 6px;
+}
+
+.transp-bkg {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";       /* IE 8 */
+    filter: alpha(opacity=50);  /* IE 5-7 */
+    -moz-opacity: 0.5;          /* Netscape */
+    -khtml-opacity: 0.5;        /* Safari 1.x */
+    opacity: 0.5;               /* Good browsers */
+}
+
+@media (min-width: 768px) {
+    .landing-img {
+        background: url("../img/landing-page-desktop.png") no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    #home h1 {
+        font-size: 5em;
+    }
+}
+
+@media (max-width: 767px) {
+    .landing-img {
+        background: url("../img/landing-page-mobile.png") no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+}
+/* end landing page */
+
+/* wanna work */
+#wanna-work {
+    color: #474747;
+    text-align: center;
+}
+
+#wanna-work p {
+    line-height: 1;
+}
+
+#wanna-work h1 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+#wanna-work h4 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.img-container p {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#wanna-work .intro p {
+    font-size: 1em;
+}
+
+#wanna-work a {
+    text-decoration: none;
+    color: #474747;
+
+    transition: opacity;
+    transition-timing-function: ease-out;
+    transition-duration: 250ms;
+}
+
+#wanna-work a:hover {
+    text-decoration: none;
+    color: #d4abe2;
+}
+
+#wanna-work a:hover img {
+    background: #fff;
+    opacity: 0.4;
+}
+/* end wanna work */
+
+/* our culture */
+#culture h4 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#culture h1 {
+    font-size: 3em;
+    font-weight: bold;
+}
+/* end out culture */
+
+/* our values & our mission */
+#values h1,
+#mission h1 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+#values p.first,
+#mission p.first {
+    padding-top: 10%;
+}
+
+#values p,
+#mission p {
+    font-size: 1.2em;
+}
+
+#values div.center,
+#mission div.center {
+    font-size: 2em;
+    padding-top: 15%;
+}
+
+#values .values-bg {
+    background: url('../img/values/value.png') no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+#mission .mission-bg {
+    background: url('../img/mission/mission.png') no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+#values .tree,
+#mission .hand {
+    padding-top: 10%;
+}
+/* end our values & our mission */
