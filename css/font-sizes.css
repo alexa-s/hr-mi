@@ -1,0 +1,43 @@
+/* font sizes */
+#wanna-work h1 {
+    font-size: 38pt;
+}
+
+#wanna-work h4 {
+    font-size: 28pt;
+}
+
+#wanna-work .intro p {
+    font-size: 14pt;
+}
+
+.img-container p {
+    font-size: 16pt;
+}
+
+#culture h4 {
+    font-size: 2em;
+}
+
+#culture h1 {
+    font-size: 3em;
+}
+
+#values h1,
+#mission h1 {
+    font-size: 3em;
+}
+
+#values p,
+#mission p {
+    font-size: 1.2em;
+}
+
+#values div.center,
+#mission div.center {
+    font-size: 2em;
+}
+
+#home a {
+    font-size: 2em;
+}
