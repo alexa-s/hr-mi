@@ -1,4 +1,3 @@
-
 /* fonts inclusion */
 @font-face {
     font-family: 'missguided_bold';
@@ -10,7 +9,6 @@
          url('../fonts/missguided-webfont.svg#missguided_bold') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -23,24 +21,29 @@
          url('../fonts/missguided_light-webfont.svg#missguided_lightlight') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
+/* font fix for chrome */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     @font-face {
         font-family: 'missguided_bold';
         src: url('../fonts/missguided-webfont.svg#missguided_bold') format('svg');
+        font-weight: normal;
+        font-style: normal;
     }
 }
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     @font-face {
         font-family: 'missguided_lightlight';
         src: url('../fonts/missguided_light-webfont.svg#missguided_lightlight') format('svg');
+        font-weight: normal;
+        font-style: normal;
     }
 }
 /* end fonts inclusion */
 
-html, body {
+html, 
+body {
 	width: 100%;
 	height: 100%;
 }
@@ -51,21 +54,21 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: greyscale;
     overflow-x: hidden;
+    padding-top: 100px;
 }
 
 .spacing {
     margin-bottom: 10%;
 }
 
-.department {
-    font-weight: bold;
-}
-
+.department,
 h2 {
     font-weight: bold;
 }
-/* langind page */
-#home {
+/* landing page */
+#home,
+#home a,
+#home a:hover {
     color: #fff;
 }
 
@@ -90,13 +93,11 @@ h2 {
 }
 
 #home a {
-    color: #fff;
     font-weight: 100;
     text-decoration: underline;
 }
 
 #home a:hover {
-    color: #fff;
     text-decoration: none;
 }
 
@@ -111,30 +112,6 @@ h2 {
     -moz-opacity: 0.5;          /* Netscape */
     -khtml-opacity: 0.5;        /* Safari 1.x */
     opacity: 0.5;               /* Good browsers */
-}
-
-@media (min-width: 768px) {
-    .landing-img {
-        background: url("../img/landing-page-desktop.png") no-repeat center center fixed; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
-
-/*    #home h1 {
-        font-size: 5em;
-    }*/
-}
-
-@media (max-width: 767px) {
-    .landing-img {
-        background: url("../img/landing-page-mobile.png") no-repeat center center fixed; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
 }
 /* end landing page */
 
@@ -176,15 +153,6 @@ h2 {
 }
 /* end wanna work */
 
-/* our culture */
-
-@media (max-width: 767px) {
-    #culture {
-        background-color: #f9f0e9;
-    }
-}
-/* end out culture */
-
 /* our values & our mission */
 #values p.first,
 #mission p.first {
@@ -213,51 +181,122 @@ h2 {
 #mission .hand {
     padding-top: 10%;
 }
-
-@media (max-width: 767px) {
-    #mission {
-        background-color: #d7f4eb;
-    }
-}
 /* end our values & our mission */
 
 /* departments & upskilling */
-#departments button, #upskilling button {
+#departments button, 
+#upskilling button {
     font-weight: bold;
     color: #474747;
     border-radius: 0;
-    border: 1px solid #000;
+    border: 1px solid #474747;
 }
 
-#upskilling a {
+#departments button:hover, 
+#upskilling button:hover {
+    color: #9764a9;
+    border: 1px solid #9764a9;
+    background-color: #fff;
+}
+
+#upskilling a,
+#departments a {
     color:  #9764a9;
     font-weight: bold; 
 }
 
 /* END departments & upskilling */
 
-/* Footer */
-#footer ul {
-    list-style-type: none;
+/* Header */
+nav {
+    background-color: #fff;
+    opacity: 0.98;
+    -webkit-box-shadow: 0px 1px 10px 0px rgba(71,71,71,0.32);
+    -moz-box-shadow: 0px 1px 10px 0px rgba(71,71,71,0.32);
+    box-shadow: 0px 1px 10px 0px rgba(71,71,71,0.32);
 }
 
+.navbar {
+    padding: 1rem 1rem;
+}
+/* END Header */
+
+/* Footer */
 #footer a {
     color:  #474747;
 }
 
-#footer p {
+#footer .f-head {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#footer .ladder {
+    width: 80px;
+}
+
+#footer .footer-icons {
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 1%;
+}
+
+#footer h5 {
     font-weight: bold;
 }
 /* END Footer */
 
 /* media queries */
 @media (max-width: 767px) {
-    #upskilling .top-spacing {
-        /*padding-top: 30%;*/
+    nav {
+        height: 106px;
+    }
+
+    .navbar-brand {
+        padding-top: 1rem;
+    }
+
+    #mission {
+        background-color: #d7f4eb;
+    }
+
+    #culture {
+        background-color: #f9f0e9;
+    }
+
+    .landing-img {
+        background: url("../img/landing-page-mobile.png") no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    #upskilling .skill,
+    #departments .skill {
+        border-bottom: 1px solid #e8e8e8;
     }
 }
 
 @media (min-width: 768px) { 
+    nav {
+        height: 82px;
+    }
+
+    .navbar-brand {
+        padding-top: 0.5rem;
+    }
+
+    .landing-img {
+        background: url("../img/landing-page-desktop.png") no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    #home h1 {
+        font-size: 5em;
+    }
 }
 
 /* END media queries */
