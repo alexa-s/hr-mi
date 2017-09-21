@@ -136,10 +136,10 @@ h2 {
 #wanna-work a {
     text-decoration: none;
     color: #474747;
-
-    transition: opacity;
-    transition-timing-function: ease-out;
-    transition-duration: 250ms;
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
 }
 
 #wanna-work a:hover {
@@ -152,6 +152,40 @@ h2 {
     opacity: 0.4;
 }
 /* end wanna work */
+
+/* culture */
+#culture .culture-images {
+    overflow: hidden;
+}
+
+#culture img {
+    -webkit-filter: grayscale(100%);
+    -webkit-transition: .5s ease-in-out;
+    -moz-filter: grayscale(100%); 
+    -moz-transition: .5s ease-in-out;
+    -o-filter: grayscale(100%); 
+    -o-transition: .5s ease-in-out;
+    filter: grayscale(100%);   
+
+    max-width: 100%;
+    -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* IE 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+}
+
+#culture img:hover {
+    -webkit-filter: saturate(20%);
+    filter: saturate(20%);
+
+    -webkit-transform:scale(1.25); /* Safari and Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+}
+/* END culture */
 
 /* our values & our mission */
 #values p.first,
@@ -200,20 +234,27 @@ h2 {
 }
 
 #upskilling a,
-#departments a {
+#departments span {
     color:  #9764a9;
     font-weight: bold; 
 }
 
 /* END departments & upskilling */
 
+/* locations */
+#locations .container-fluid {
+    background: url('../img/locations/map.jpg') no-repeat;
+    background-size: cover;
+}
+/* END locations */
+
 /* Header */
 nav {
     background-color: #fff;
     opacity: 0.98;
-    -webkit-box-shadow: 0px 1px 10px 0px rgba(71,71,71,0.32);
-    -moz-box-shadow: 0px 1px 10px 0px rgba(71,71,71,0.32);
-    box-shadow: 0px 1px 10px 0px rgba(71,71,71,0.32);
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.35);
+    -moz-box-shadow:    0px 1px 5px 0px rgba(50, 50, 50, 0.35);
+    box-shadow:         0px 1px 5px 0px rgba(50, 50, 50, 0.35);
 }
 
 .navbar {
@@ -248,11 +289,15 @@ nav {
 /* media queries */
 @media (max-width: 767px) {
     nav {
-        height: 106px;
+        min-height: 106px;
     }
 
     .navbar-brand {
         padding-top: 1rem;
+    }
+
+    .navbar-toggler {
+        margin-top: 1rem;
     }
 
     #mission {
@@ -275,11 +320,29 @@ nav {
     #departments .skill {
         border-bottom: 1px solid #e8e8e8;
     }
-}
+
+    .img-container ul {
+        list-style: none outside none;
+        padding-left: 0;
+        margin-bottom:0;
+    }
+
+    .img-container li {
+        display: block;
+        float: left;
+        margin-right: 6px;
+        cursor:pointer;
+    }
+
+    .img-container img {
+        display: block;
+        height: auto;
+        max-width: 100%;
+    }
 
 @media (min-width: 768px) { 
     nav {
-        height: 82px;
+        min-height: 82px;
     }
 
     .navbar-brand {
