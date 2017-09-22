@@ -99,15 +99,28 @@ h2 {
 
 #home .form-control {
     margin-right: -1px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+#home .input-group-addon {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#home .form-control,
+#home .input-group-addon {
+    background: transparent;
+    color: #fff;
     border: 1px solid #fff;
 }
 
 .transp-bkg {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";      
+/*    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";      
     filter: alpha(opacity=50);  
     -moz-opacity: 0.5;         
     -khtml-opacity: 0.5;        
-    opacity: 0.5;              
+    opacity: 0.5;    */          
 }
 
 .landing-p {
